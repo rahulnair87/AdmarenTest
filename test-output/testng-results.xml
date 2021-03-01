@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53787" started-at="2021-03-01T10:17:48Z" finished-at="2021-03-01T10:18:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="53787" started-at="2021-03-01T10:17:48Z" finished-at="2021-03-01T10:18:42Z">
+      <class name="com.crm.qa.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.tests.LoginPageTest@464bee09]" name="setUp" is-config="true" duration-ms="15022" started-at="2021-03-01T15:47:48Z" finished-at="2021-03-01T15:48:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.crm.qa.tests.LoginPageTest@464bee09]" name="loginTest" duration-ms="3525" started-at="2021-03-01T15:48:04Z" finished-at="2021-03-01T15:48:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="addNewPortTest()[pri:2, instance:com.crm.qa.tests.LoginPageTest@464bee09]" name="addNewPortTest" duration-ms="33081" started-at="2021-03-01T15:48:07Z" finished-at="2021-03-01T15:48:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPortTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.tests.LoginPageTest@464bee09]" name="tearDown" is-config="true" duration-ms="2132" started-at="2021-03-01T15:48:40Z" finished-at="2021-03-01T15:48:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.tests.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
