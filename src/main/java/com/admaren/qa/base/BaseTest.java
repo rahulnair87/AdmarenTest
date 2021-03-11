@@ -1,4 +1,4 @@
-package com.crm.qa.base;
+package com.admaren.qa.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import com.retail.utils.Constants;
-import com.retail.utils.GeneralUtils;
+import com.admaren.qa.utils.Constants;
+import com.admaren.qa.utils.GeneralUtils;
 
 
 public class BaseTest {
@@ -23,7 +23,7 @@ public class BaseTest {
 	public BaseTest(){
 		
 		try {
-			File file = new File(System.getProperty("user.dir")+"/src/main/java/com/crm/qa/config/config.properties");
+			File file = new File(System.getProperty("user.dir")+"/src/main/java/com/admaren/qa/config/config.properties");
 			FileInputStream fis = new FileInputStream(file);
 			prop = new Properties();
 			prop.load(fis);

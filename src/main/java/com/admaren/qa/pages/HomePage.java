@@ -1,15 +1,20 @@
-package com.crm.qa.pages;
+package com.admaren.qa.pages;
 
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.text.WordUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.admaren.qa.base.BaseTest;
+import com.admaren.qa.utils.GeneralUtils;
+
 import org.openqa.selenium.support.locators.RelativeLocator;
-import com.crm.qa.base.BaseTest;
 
 //Dashboard
 public class HomePage extends BaseTest{
@@ -54,10 +59,18 @@ public class HomePage extends BaseTest{
 	}
 	
 	public Boolean findFixtureInCalendar(){
-		//By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='PO-202121']");
-		//By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='Cochin']");
-		By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='Captain 5']");
+		//By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='PO-202121']/../..");
+		By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='Cochin']");
+		//By layDayTab = By.xpath("//div[@class='ng-star-inserted']/div[text()='Captain 5']/../..");
 		WebElement ele1 = driver.findElement(layDayTab);
+		
+		String[] arrDate = prop.getProperty("etaDate").split("/");
+		String day = arrDate[0];
+		String month =  Month.of(Integer.parseInt(arrDate[1])).toString();
+		String year = arrDate[2];
+		
+		final char[] delimiters = { ' ', '_' };
+		month = WordUtils.capitalizeFully(month, delimiters);
 		
 		Point point1 = ele1.getLocation();
 		int x1 = point1.getX();
@@ -72,11 +85,13 @@ public class HomePage extends BaseTest{
 		String xpathDate= "";
 		WebElement eleDate = null;
 		List<String> datesOfActivity = new ArrayList<String>();
-		for(int i=1; i<=31 ; i++){
-			xpathDate = "//td[contains(@class,'e-date-header')]/span[text()='%s']";
-			xpathDate = String.format(xpathDate, String.valueOf(i));
+		
+		
+		for(int i=2; i<=31 ; i++){
+			xpathDate = "//td[contains(@class,'e-date-header')]/span[text()='%1$s' and contains(@title, '%2$s')]";
+			xpathDate = String.format(xpathDate, String.valueOf(i),month);
 			eleDate = driver.findElement(By.xpath(xpathDate));
-			if(eleDate.isDisplayed()){
+			if(eleDate!= null){
 				Point point2 = eleDate.getLocation();
 				int x2 = point2.getX();
 				int eleDateWidth = eleDate.getSize().getWidth();

@@ -1,10 +1,10 @@
-package com.crm.qa.pages;
+package com.admaren.qa.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.crm.qa.base.BaseTest;
+import com.admaren.qa.base.BaseTest;
 
 
 public class LoginPage extends BaseTest{

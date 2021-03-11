@@ -37,7 +37,7 @@
 	</build>
 
 	<dependencies>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -58,6 +58,11 @@
 			<artifactId>testng</artifactId>
 			<version>6.13</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.4</version>
 		</dependency>
 
 		<dependency>

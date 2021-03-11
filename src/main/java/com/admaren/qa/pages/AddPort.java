@@ -1,4 +1,4 @@
-package com.crm.qa.pages;
+package com.admaren.qa.pages;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.crm.qa.base.BaseTest;
-import com.retail.utils.GeneralUtils;
-import com.retail.utils.Globals;
+import com.admaren.qa.base.BaseTest;
+import com.admaren.qa.utils.GeneralUtils;
+import com.admaren.qa.utils.Globals;
 
 
 public class AddPort extends BaseTest{

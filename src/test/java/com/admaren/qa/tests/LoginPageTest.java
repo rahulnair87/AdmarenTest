@@ -1,4 +1,4 @@
-package com.crm.qa.tests;
+package com.admaren.qa.tests;
 
 import java.net.MalformedURLException;
 
@@ -11,10 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.crm.qa.base.BaseTest;
-import com.crm.qa.pages.AddPort;
-import com.crm.qa.pages.HomePage;
-import com.crm.qa.pages.LoginPage;
+import com.admaren.qa.base.BaseTest;
+import com.admaren.qa.pages.AddPort;
+import com.admaren.qa.pages.HomePage;
+import com.admaren.qa.pages.LoginPage;
 
 public class LoginPageTest extends BaseTest {
 	

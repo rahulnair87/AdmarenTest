@@ -1,4 +1,4 @@
-package com.retail.utils;
+package com.admaren.qa.utils;
 
 public class Globals {
 	
